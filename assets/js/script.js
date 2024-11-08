@@ -23,27 +23,25 @@
 })(document, 'script');
 
 //start-btn
-document.querySelector('.start-btn').addEventListener('click', function() {
-    const mainBlock = document.querySelector('.main');
-    const mainChatBlock = document.querySelector('.main-chat');
 
+let mainBlock = document.querySelector('.main');
+let mainChatBlock = document.querySelector('.main-chat');
+document.querySelector('.start-btn').addEventListener('click', function() {
     if (mainBlock && mainChatBlock) {
         mainBlock.classList.add('hide');
         mainChatBlock.classList.add('active');
     }
 });
 
-// back btn
+// back-btn
 document.querySelector('.back-btn').addEventListener('click', function() {
-    const mainBlock = document.querySelector('.main');
-    const mainChatBlock = document.querySelector('.main-chat');
-    
-    if (mainBlock && mainChatBlock) {
+    if (mainChatBlock.classList.contains('active')) {
         mainBlock.classList.remove('hide');
         mainChatBlock.classList.remove('active');
+    } else {
+        window.history.back();
     }
 });
-
 
 //cart
 document.querySelector('.chat-cart-icon').addEventListener('click', function() {
