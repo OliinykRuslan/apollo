@@ -11,7 +11,10 @@
             mode: 'embedded',
             target: document.getElementById('flat-chat')
         },
-        autostart: true
+        autostart: true,
+        assistant: {
+            stylesheet: 'assets/css/style.css'
+        }
         });
     }
     v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
@@ -29,6 +32,18 @@ document.querySelector('.start-btn').addEventListener('click', function() {
         mainChatBlock.classList.add('active');
     }
 });
+
+// back btn
+document.querySelector('.back-btn').addEventListener('click', function() {
+    const mainBlock = document.querySelector('.main');
+    const mainChatBlock = document.querySelector('.main-chat');
+    
+    if (mainBlock && mainChatBlock) {
+        mainBlock.classList.remove('hide');
+        mainChatBlock.classList.remove('active');
+    }
+});
+
 
 //cart
 document.querySelector('.chat-cart-icon').addEventListener('click', function() {
