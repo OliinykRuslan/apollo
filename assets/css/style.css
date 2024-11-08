@@ -43,12 +43,10 @@ button {
 .wrap {
     display: flex;
     flex-direction: column;
-
     background-color: #313866;
     font-family: 'CenturyGothic';
     width: 100%;
-    height: 100%;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .mx-auto {
@@ -280,14 +278,23 @@ button {
 .vfrc-chat {
     background-color: transparent;
 }
-/* .vfrc-chat--dialog { */
-    /* display: block;
+/* .vfrc-chat--dialog {
+    display: block;
     overflow-y: scroll;
     scrollbar-width: none;
-    padding-top: 12px; */
-
-    /* padding: 100px 0;
+    padding-top: 12px;
+    padding: 100px 0;
 } */
+
+.vfrc-chat--dialog .c-gSBsRr-dCAjaq-scrollable-true {
+    max-width: 850px;
+    margin-left: 55px;
+    padding: 0;
+}
+.vfrc-chat--dialog .c-gSBsRr-dCAjaq-scrollable-true .vfrc-avatar,
+.vfrc-chat--dialog .c-gSBsRr-dCAjaq-scrollable-true .vfrc-timestamp {
+    display: none;
+}
 
 .vfrc-chat--dialog::-webkit-scrollbar-track {
 	background-color: transparent;
