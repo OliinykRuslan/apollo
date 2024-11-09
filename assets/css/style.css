@@ -46,9 +46,10 @@ button {
     background-color: #313866;
     font-family: 'CenturyGothic';
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
 }
-
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -114,8 +115,6 @@ button {
     height: 100%;
     padding: 60px 0 0;
     flex-grow: 1;
-    /* height: calc(100% - 85px); */
-    /* padding: 0 0 50px; */
 }
 .img-col {
     background-image: url('../images/hero.jpg');
@@ -133,7 +132,6 @@ button {
 .text-col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
     padding: 20px;
     padding-left: 20px;
@@ -171,7 +169,6 @@ button {
     font-size: 16px;
     font-weight: 700;
     margin: 0 0 24px;
-
     letter-spacing: 0.5px;
     line-height: 1.4;
 }
@@ -277,6 +274,7 @@ button {
 }
 .vfrc-chat {
     background-color: transparent;
+    max-width: 100vw;
 }
 /* .vfrc-chat--dialog {
     display: block;
@@ -289,6 +287,7 @@ button {
 .vfrc-chat--dialog .c-gSBsRr-dCAjaq-scrollable-true {
     max-width: 850px;
     margin-left: 55px;
+    margin-right: 20px;
     padding: 0;
 }
 .vfrc-chat--dialog .c-gSBsRr-dCAjaq-scrollable-true .vfrc-avatar,
@@ -306,10 +305,9 @@ button {
 .vfrc-chat--dialog::-webkit-scrollbar-thumb {
 	background-color: transparent;
 }
-
-/* .c-iLVmPU {
-    height: auto;
-} */
+.c-PJLV-gJqBfM-from-user {
+    border: 1px solid #fff;
+}
 .vfrc-footer {
     position: fixed;
     left: auto;
@@ -360,13 +358,12 @@ button {
     .subtitle {
         text-transform: uppercase;
         letter-spacing: 2.5px;
-        margin: 0 0 40px;
+        /* margin: 0 0 40px; */
     }
     .wrap {
         position: fixed;
     }
     .main {
-        /* height: calc(100% - 85px); */
         padding: 0;
     }
     .img-col {
@@ -377,7 +374,8 @@ button {
         display: none;
     }
     .text-col {
-        padding: 100px 5rem;
+        justify-content: center;
+        padding: 85px 5rem 0;
         width: 60%;
         max-width: 100%;
     }
@@ -414,6 +412,9 @@ button {
     .c-jJnANo {
         padding: 48px 32px;
     }
+    .vfrc-chat--dialog .c-gSBsRr-dCAjaq-scrollable-true {
+        max-width: 850px;
+    }
     .vfrc-footer {
         width: calc(100% - 40px);
         padding-left: 0;
@@ -421,7 +422,7 @@ button {
     }
 }
 
-@media (max-height: 850px) {
+@media (max-height: 870px) {
     .text-col .img-holder {
         max-width: 150px;
     }
