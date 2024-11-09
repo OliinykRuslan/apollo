@@ -97,18 +97,18 @@ document.querySelector('.cart-overlay').addEventListener('click', function() {
 // fetchCartData();
 
 // 3
-async function fetchCartData() {
-    try {
-        const response = await fetch('https://clinicalroots.azurewebsites.net/wp-json/custom/v1/cart', {
-            headers: {
-                'Authorization': 'Basic ' + btoa('ck_33cb63a110351082ba0ee871261b056685357d78:cs_8bc9263b74f0875c3ca631b9fd0371c7b80f92f4')
-            }
-        });
-        const cartData = await response.json();
-        console.log(cartData);
-    } catch (error) {
-        console.error('Error fetching cart data:', error);
-    }
-}
+// async function fetchCartData() {
+//     try {
+//         const response = await fetch('https://clinicalroots.azurewebsites.net/wp-json/custom/v1/cart', {
+//             headers: {
+//                 'Authorization': 'Basic ' + btoa('ck_33cb63a110351082ba0ee871261b056685357d78:cs_8bc9263b74f0875c3ca631b9fd0371c7b80f92f4')
+//             }
+//         });
+//         const cartData = await response.json();
+//         console.log(cartData);
+//     } catch (error) {
+//         console.error('Error fetching cart data:', error);
+//     }
+// }
 
-fetchCartData();
+// fetchCartData();

@@ -66,6 +66,14 @@ button {
     padding-left: 20px;
     padding-right: 20px;
 }
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: #313866;
+}
 .back-btn,
 .chat-cart-icon,
 .close-btn {
@@ -83,6 +91,9 @@ button {
 }
 .back-btn:hover > svg {
     stroke: #5e9e54;
+}
+.back-btn:focus > svg {
+    stroke: #fff;
 }
 .chat-cart-icon {
     position: relative;
@@ -113,7 +124,6 @@ button {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    padding: 60px 0 0;
     flex-grow: 1;
 }
 .img-col {
@@ -122,8 +132,7 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* min-height: 437px; */
-    padding: 57px 20px;
+    padding: 117px 20px 57px;
     flex-grow: 1;
 }
 .img-col img {
@@ -233,7 +242,6 @@ button {
     bottom: 0;
     position: fixed;
     z-index: 20;
-    /* right: -544px; */
     right: -100%;
     padding-top: 1rem;
     padding-left: .5rem;
@@ -253,7 +261,6 @@ button {
     visibility: visible;
     opacity: 1;
 }
-
 .main-chat {
     height: 100%;
     margin: 100px auto;
@@ -262,6 +269,7 @@ button {
 .main-chat.active {
     display: flex;
 }
+/* chat */
 .c-jJnANo {
     padding: 0;
 }
@@ -276,14 +284,6 @@ button {
     background-color: transparent;
     max-width: 100vw;
 }
-/* .vfrc-chat--dialog {
-    display: block;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    padding-top: 12px;
-    padding: 100px 0;
-} */
-
 .vfrc-chat--dialog .c-gSBsRr-dCAjaq-scrollable-true {
     max-width: 850px;
     margin-left: 55px;
@@ -294,7 +294,6 @@ button {
 .vfrc-chat--dialog .c-gSBsRr-dCAjaq-scrollable-true .vfrc-timestamp {
     display: none;
 }
-
 .vfrc-chat--dialog::-webkit-scrollbar-track {
 	background-color: transparent;
 }
@@ -318,6 +317,7 @@ button {
     background-color: #313866;
     max-width: 992px;
     margin: 0 auto;
+    box-shadow: none;
 }
 .vfrc-footer .c-fYYkXN {
     border-radius: 20px 0 0 20px;
@@ -325,14 +325,8 @@ button {
 .vfrc-footer .c-iGGXrm {
     border-radius: 0 20px 20px 0;
 }
-
-.header {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    background-color: #313866;
+.vfrc-footer .vfrc-button {
+    border: 1px solid #fff;
 }
 
 @media (min-width: 768px) {
@@ -358,13 +352,9 @@ button {
     .subtitle {
         text-transform: uppercase;
         letter-spacing: 2.5px;
-        /* margin: 0 0 40px; */
     }
     .wrap {
         position: fixed;
-    }
-    .main {
-        padding: 0;
     }
     .img-col {
         width: 40%;
@@ -389,7 +379,6 @@ button {
         border: 2px solid #fff;
         border-radius: 20px;
         overflow: auto;
-        /* margin: 100px auto; */
         height: 100%;
         max-height: calc(100% - 185px);
     }
@@ -401,7 +390,7 @@ button {
     .footer-text {
         font-size: 16px;
     }
-
+    /* chat */
     .vfrc-header,
     .vfrc-assistant-info,
     .vfrc-chat--session-time,
@@ -437,6 +426,10 @@ button {
         padding: 12px 10px;
         margin: 0 auto 25px;
     }
+
+}
+
+@media (max-height: 870px) and (min-width: 992px) {
     .footer-text {
         font-size: 14px;  
     }
