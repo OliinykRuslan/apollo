@@ -124,7 +124,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 .img-col {
     background-image: url('../images/hero.jpg');
@@ -133,7 +133,7 @@ button {
     background-size: cover;
     background-position: center;
     padding: 117px 20px 57px;
-    flex-grow: 1;
+    min-height: 45vh;
 }
 .img-col img {
     width: 100%;
@@ -165,6 +165,7 @@ button {
     font-weight: 400;
     line-height: 1.4;
     max-width: 450px;
+    margin: auto;
     display: none;
 }
 .title span {
@@ -411,7 +412,7 @@ button {
     }
 }
 
-@media (max-height: 870px) {
+@media (max-height: 875px) {
     .text-col .img-holder {
         max-width: 150px;
     }
