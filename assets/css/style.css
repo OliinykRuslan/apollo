@@ -82,6 +82,19 @@ button {
     border: 0;
     cursor: pointer;
 }
+.apllo-wrap .back-btn {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+    transition: background-color 150ms;
+}
+.apllo-wrap .back-btn:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+}
 .apllo-wrap .back-btn svg,
 .apllo-wrap .chat-cart-icon svg path {
     stroke: #fff;
@@ -89,12 +102,6 @@ button {
 }
 .apllo-wrap .close-btn svg {
     stroke: #222;
-}
-.apllo-wrap .back-btn:hover > svg {
-    stroke: #5e9e54;
-}
-.apllo-wrap .back-btn:focus > svg {
-    stroke: #fff;
 }
 .apllo-wrap .chat-cart-icon {
     position: relative;
@@ -277,8 +284,16 @@ button {
     padding: 0;
 }
 .vfrc-header {
+    position: fixed;
+    top: 15px;
+    left: 65px;
+    z-index: 9;
+    padding: 0;
+    height: auto;
+    border-radius: 6px;
     box-shadow: none;
 }
+
 .vfrc-header .vfrc-avatar,
 .vfrc-header .vfrc-header--title,
 .vfrc-assistant-info,
@@ -418,6 +433,9 @@ button {
     right: -13px;
     left: auto;
 }
+.vfrc-chat--dialog {
+    padding-right: 16px;
+}
 
 @media (min-width: 768px) {
     .apllo-wrap .cart {
@@ -485,10 +503,12 @@ button {
         max-height: 75vh;
     }
     .vfrc-header {
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+        top: 24px;
+        left: auto;
+        right: auto;
+        margin-left: 100px;
+        background-color: transparent;
     }
-    .vfrc-header .vfrc-avatar,
-    .vfrc-header .vfrc-header--title,
     .vfrc-assistant-info,
     .vfrc-chat--session-time,
     .vfrc-timestamp {
@@ -510,7 +530,6 @@ button {
         opacity: 1;
         z-index: 9;
     }
-
     .c-jJnANo {
         padding: 48px 32px;
     }
@@ -522,23 +541,8 @@ button {
         padding-left: 0;
         padding-right: 0;
     }
-}
-
-@media (max-width: 991px) {
     .vfrc-chat--dialog {
-        padding-right: 16px;
-    }
-    .vfrc-header {
-        position: fixed;
-        right: 26px;
-        top: 65px;
-        z-index: 9;
-        padding: 0;
-        height: auto;
-        border-radius: 6px;
-    }
-    .vfrc-header .vfrc-header--button {
-        background-color: rgba(255, 255, 255, 0.16);
+        padding-right: 0;
     }
 }
 
